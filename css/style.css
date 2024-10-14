@@ -1,39 +1,38 @@
-.skip {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #FFCB05;
-    color: #575294;
-    padding: 10px;
-    z-index: 100;
-}
-
-.skip:focus {
-    top: 10px;
-}
-
-body {
-    background-color: #575294;
-    color: white;
-}
-
+/* Style */
 h1 {
-    color: #FFCB05;
+    margin-top: 30px;
+    /* Add space between the nav and the heading */
+    font-size: 300%;
+    color: #00274C;
     font-family: Times, sans-serif;
-    font-size: 200%;
     text-align: center;
 }
 
+body {
+    background-color: white;
+    color: black;
+}
+
+section{
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 h2 {
-    color: #FFCB05;
+    color: #00274C;
     font-family: Times, sans-serif;
-    font-size: 150%;
+    font-size: 200%;
 }
 
 h3 {
-    color: #FFCB05;
+    color: #00274C;
     font-family: Times, sans-serif;
-    font-size: 125%;
+    font-size: 150%;
 }
 
 p {
@@ -42,13 +41,181 @@ p {
 }
 
 img {
-    border:5px solid #FFCB05;
-    padding:10px;
-    margin:20px;
+    border: 5px solid #FFCB05;
+    padding: 10px;
+    margin: 20px;
     border-top-right-radius: 30px;
 }
 
-li{
-    display:inline-block;
-    margin-left:50px;
+ul {
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center align items */
+    margin: 20px 0; /* Margin above and below the list */
+}
+
+li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+figcaption{
+    font-size: 80%;
+    text-align: center;
+    color: #989C97;
+}
+
+a:focus{
+    text-decoration: underline;
+    display: inline-block;
+    border: 2px solid #2F65A7;
+}
+
+/* Hidden Skip to Main */
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #2F65A7;
+    color: #FFFFFF;
+    padding: 10px;
+    z-index: 100;
+}
+
+.skip:focus {
+    top: 10px;
+}
+
+/* header: logo-header, nav, h1 */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-header {
+    max-height: 100%;
+    /* Adjust the size of the logo */
+    margin-bottom: 20px;
+    /* Add space between the logo and nav */
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFCB05;
+    text-align: center;
+}
+
+nav ol{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color:#FFCB05;
+    color:#00274C;
+}
+
+nav ol li a {
+    display: block;
+    padding: 10px 20px;
+    color: #00274C;
+    font-size: 1.2rem;
+    border-radius: 5px; 
+}
+
+nav ol li a:hover {
+    background-color: #00274C;
+    color: #FFCB05
+}
+
+@media (min-width: 601px) {
+    nav ol {
+        flex-direction: column; 
+        justify-content: center; 
+    }
+
+    nav ol li {
+        margin: 0 10px;
+    }
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-intro, .main01, .main02, .main03 {
+    grid-column: 2 / span 1;
+    border: 1px solid #ccc;
+}
+
+.main-intro{
+    grid-row: 1;
+}
+
+.main01 {
+    grid-row: 2;
+}
+
+.main02 {
+    grid-row: 3;
+}
+
+.main03 {
+    grid-row: 4;
+}
+
+/* Image styling */
+.main01-image img,
+.main02-image img,
+.main03-image img {
+    width: 100%;
+    /* Make the image fill the column */
+    height: 500px;
+    /* Set a fixed height for uniformity */
+    object-fit: cover;
+    /* Crop the image to fit */
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button {
+    flex: 1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: #9A3324;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: #9A3324;
+    border-color: #00274C; /* Border changes to dark blue */
+}
+
+/* Footer */
+footer {
+    background-color: #00274C;
+    color: #FFCB05;
+    padding: 20px;
+    text-align: center;
 }
