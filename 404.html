@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main id="error-page">
+        <img src="images/404.webp" alt="404 icon" id="error-icon">
+
+        <div id="error-text">
+            <h1>404</h1>
+            <h2>Oops! Page Not Found</h2>
+            <div class="button-container">
+                <a href="index.html" class="home-btn">Return to Home</a>
+                <button type="button" class="contact-form-btn" tabindex="0" aria-label="Open contact form"
+                    onclick="openForm()" onkeydown="handleKeyDown(event)">Contact Us</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="popup">
+        <span class="close" onclick="closeForm()" tabindex="0" >&times;</span>
+        <div class="contactForm">
+            <h2 class="form-header">Contact Us</h2>
+            <form action="https://formspree.io/f/mvgorggw" method="POST">
+                <label for="name">Name:</label>
+                <input id="name" type="name" name="name" placeholder="Write your name here.."></input>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email"placeholder="Let us know how to contact you back.."></input>
+
+                <label for="message">Message:</label>
+                <input id="message" type="message" name="message" placeholder="What would you like to tell us.."></input>
+
+                <input type="submit" value="Submit" tabindex="0" >
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === ' ' || event.key === "Enter") {
+                openForm();
+            }
+        }
+
+        function closeForm() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -12,13 +12,12 @@
 <body>
     <a href="#main" class="skip">Skip to Main Content</a>
     <header>
+        <img src="images/UMSI_logo-header.png" alt="UMSI Logo" class="logo-header">
         <nav>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Academic_Resources.html">Academic Resources</a></li>
-                <li><a href="Food_Pantry.html">Food Pantry</a></li>
-                <li><a href="Counseling_Services.html">Counseling Services</a></li>
-            </ol>
+            <a href="index.html">Home</a>
+            <a href="Academic_Resources.html" class="active">Academic Resources</a>
+            <a href="Food_Pantry.html" >Food Pantry</a>
+            <a href="Counseling_Services.html">Counseling Services</a>
         </nav>
         <h1>Academic Resources</h1>
     </header>
@@ -26,11 +25,11 @@
     <main id="main">
         <aside class="sidebar-container">
             <h2 class="sidebar-header">Contents</h3>
-            <ol class="sidebar-menu">
-                <li><a href="#important_dates">UMSI Fall 2024 Important Dates</a></li>
-                <li><a href="#degree">UMSI Degree Requirements</a></li>
-                <li><a href="#useful_programs">Other University-Wide Academic Support Programs</a></li>
-            </ol>
+            <div class="sidebar-menu">
+                <a href="#important_dates">UMSI Fall 2024 Important Dates</a>
+                <a href="#degree">UMSI Degree Requirements</a>
+                <a href="#useful_programs">Other University-Wide Academic Support Programs</a>
+            </div>
         </aside>
 
         <section class="main-intro">
@@ -82,10 +81,49 @@
 
     </main>
     <footer>
-        <p>&copy; UMSI | <a href="https://sites.google.com/umich.edu/msiacademicadvising/home?authuser=0">Advising
-                Resources</a>
-        </p>
+        <p>&copy; UMSI <span id="year"></span> | <a
+                href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic
+                Advising </a></p>
+        <p class="footer-contact" tabindex="0" aria-label="Open contact form"
+        onclick="openForm()" onkeydown="handleKeyDown(event)">Contact Us</p>
     </footer>
+
+    <div id="popup">
+        <span class="close" onclick="closeForm()" tabindex="0" >&times;</span>
+        <div class="contactForm">
+            <h2 class="form-header">Contact Us</h2>
+            <form action="https://formspree.io/f/mvgorggw" method="POST">
+                <label for="name">Name:</label>
+                <input id="name" type="name" name="name" placeholder="Write your name here.."></input>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email"placeholder="Let us know how to contact you back.."></input>
+
+                <label for="message">Message:</label>
+                <input id="message" type="message" name="message" placeholder="What would you like to tell us.."></input>
+
+                <input type="submit" value="Submit" tabindex="0" >
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        function openForm() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === ' ' || event.key === "Enter") {
+                openForm();
+            }
+        }
+
+        function closeForm() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

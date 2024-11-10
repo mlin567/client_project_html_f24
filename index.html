@@ -17,12 +17,10 @@
         <!--images/... is a relative path relative to where the current html file is located-->
         <img src="images/UMSI_logo-header.png" alt="UMSI Logo" class="logo-header">
         <nav>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Academic_Resources.html">Academic Resources</a></li>
-                <li><a href="Food_Pantry.html">Food Pantry</a></li>
-                <li><a href="Counseling_Services.html">Counseling Services</a></li>
-            </ol>
+            <a href="index.html" class="active">Home</a>
+            <a href="Academic_Resources.html">Academic Resources</a>
+            <a href="Food_Pantry.html">Food Pantry</a>
+            <a href="Counseling_Services.html">Counseling Services</a>
         </nav>
         <h1>Student Success Portal</h1>
     </header>
@@ -30,11 +28,11 @@
     <main id="main">
         <aside class="sidebar-container">
             <h2 class="sidebar-header">Contents</h3>
-            <ol class="sidebar-menu">
-                <li><a href="#physical">Physical Health</a></li>
-                <li><a href="#mental">Mental Health</a></li>
-                <li><a href="#outside_classroom">Life Outside Classroom</a></li>
-            </ol>
+                <div class="sidebar-menu">
+                    <a href="#physical">Physical Health</a>
+                    <a href="#mental">Mental Health</a>
+                    <a href="#outside_classroom">Life Outside Classroom</a>
+                </div>
         </aside>
 
         <section class="main-intro">
@@ -97,7 +95,7 @@
         <section class="main03" id="outside_classroom">
             <h2>Life Outside the Classroom</h2>
             <div class="main03-image">
-                <img src="images/StudentOrganizations.jpg.JPG" alt="Student Organization Activities">
+                <img src="images/StudentOrganizations.jpg" alt="Student Organization Activities">
             </div>
             <div class="main01-text">
                 <p>Graduate school is more than just academics. It's important to cultivate a balanced life. Here are
@@ -124,10 +122,50 @@
     </main>
 
     <footer>
-        <p>&copy; UMSI | <a
+        <p>&copy; UMSI <span id="year"></span> | <a
                 href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic
                 Advising </a></p>
+        <p class="footer-contact" tabindex="0" aria-label="Open contact form"
+        onclick="openForm()" onkeydown="handleKeyDown(event)">Contact Us</p>
     </footer>
+
+    <div id="popup">
+        <span class="close" onclick="closeForm()" tabindex="0" >&times;</span>
+        <div class="contactForm">
+            <h2 class="form-header">Contact Us</h2>
+            <form action="https://formspree.io/f/mvgorggw" method="POST">
+                <label for="name">Name:</label>
+                <input id="name" type="name" name="name" placeholder="Write your name here.."></input>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email"placeholder="Let us know how to contact you back.."></input>
+
+                <label for="message">Message:</label>
+                <input id="message" type="message" name="message" placeholder="What would you like to tell us.."></input>
+
+                <input type="submit" value="Submit" tabindex="0" >
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        function openForm() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === ' ' || event.key === "Enter") {
+                openForm();
+            }
+        }
+
+        function closeForm() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
 </body>
 
 </html>

@@ -12,13 +12,12 @@
 <body>
     <a href="#main" class="skip">Skip to Main Content</a>
     <header>
+        <img src="images/UMSI_logo-header.png" alt="UMSI Logo" class="logo-header">
         <nav>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Academic_Resources.html">Academic Resources</a></li>
-                <li><a href="Food_Pantry.html">Food Pantry</a></li>
-                <li><a href="Counseling_Services.html">Counseling Services</a></li>
-            </ol>
+            <a href="index.html">Home</a>
+            <a href="Academic_Resources.html">Academic Resources</a>
+            <a href="Food_Pantry.html">Food Pantry</a>
+            <a href="Counseling_Services.html" class="active">Counseling Services</a>
         </nav>
         <h1>Counseling and Psychological Services (CAPS)</h1>
     </header>
@@ -26,15 +25,14 @@
     <main id="main">
         <aside class="sidebar-container">
             <h2 class="sidebar-header">Contents</h3>
-            <ol class="sidebar-menu">
-            <ol>
-                <li><a href="#appointment">Appointment</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#services">Services</a></li>
-            </ol>
+                <div class="sidebar-menu">
+                    <a href="#appointment">Appointment</a>
+                    <a href="#location">Location</a>
+                    <a href="#services">Services</a>
+                </div>
         </aside>
 
-        <section class="main-intro" id="appointment">
+        <section id="appointment">
             <div class="button-container">
                 <a href="https://caps.umich.edu/article/scheduling-appointment" class="button">Make an Appointment </a>
                 <a href="https://caps.umich.edu/article/urgent-support" class="button">Urgent Support </a>
@@ -52,7 +50,9 @@
             </figure>
             <p>Location:</p>
             <address>
-                <a href="https://www.google.com/maps/place/Michigan+Union/@42.2750492,-83.7442398,17z/data=!3m1!4b1!4m6!3m5!1s0x883cae47822fa39b:0xfc4758afcea7328a!8m2!3d42.2750492!4d-83.7416649!16zL20vMDUycmo3?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">Michigan Union, Suite 4079, 530 South State Street, Ann Arbor, MI 48109</a>
+                <a
+                    href="https://www.google.com/maps/place/Michigan+Union/@42.2750492,-83.7442398,17z/data=!3m1!4b1!4m6!3m5!1s0x883cae47822fa39b:0xfc4758afcea7328a!8m2!3d42.2750492!4d-83.7416649!16zL20vMDUycmo3?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">Michigan
+                    Union, Suite 4079, 530 South State Street, Ann Arbor, MI 48109</a>
             </address>
             <p>Contact:</p>
             <address>
@@ -62,48 +62,108 @@
         </section>
 
         <section class="main02" id="services">
-            <h2>Other Services</h2>
+            <h2>Scope of Services</h2>
             <p>
-                At the University of Michigan, we recognize there is no “one size fits all” approach to supporting
-                student mental health. That's why we provide a variety of options to meet a diversity of needs. Check
-                out the options listed below to see what may be a good fit for you.
+                In support of the educational goals of the University and the Division of Student Life, Counseling and
+                Psychological Services (CAPS) provides a range of clinical, preventative, and training services
+                consistent with the practices and standards of a nationally accredited university counseling center.
+                CAPS is committed to creating a safe and supportive environment based on our multicultural,
+                multi-disciplinary and multi-theoretical values and practices that allow our diverse student body to
+                access care, to receive high quality services, and to take positive pathways to mental health.
             </p>
-            <p>
-                Most of you know that individual counseling is one option -- but we know that not everyone wants or
-                needs individual therapy with a professional -- so we've created other options which are noted below
-                with a brief description to help you decide what route you may want to take.
+            <h3>Clinical Services</h3>
+            <p>CAPS licensed therapists provide confidential clinical services for eligible U of M undergraduate and
+                graduate students. We strive to provide services in an inclusive atmosphere that is welcoming,
+                comfortable, and multiculturally sensitive for all students.
+
+                Mental health therapy goes by different names including counseling, psychotherapy, talk therapy, and
+                supportive counseling. It is a collaborative process between a client and counselor that begins with
+                establishing a trusting and respectful relationship in a caring and nonjudgmental environment. Together
+                the client and counselor explore the client’s concerns and develop mutually agreed upon goals for
+                therapy. Some typical goals include:
+
+                Furthermore, CAPS has established several multidisciplinary teams to support students that experience
+                specific concerns (i.e., Eating Issues Network [EIN]; Gender Affirming Care Team; Survivor Support Team
+                [SST]).</p>
+            <ul>
+                <li>Identifying and changing patterns of thinking or believing that hinder personal and academic success
+                    or create and maintain problem situations</li>
+                <li>Deepening understanding of oneself</li>
+                <li>Discovering and developing personal strengths</li>
+                <li>Developing or regaining a sense of control and pleasure in life</li>
+                <li>Developing or improving coping skills</li>
+                <li>Asking for help and support from friends, family, and other campus resources</li>
+                <li>Creating a greater understanding of oneself in relationships with others</li>
+            </ul>
+
+            <h3>Crisis Services</h3>
+            <p>CAPS clinicians are available for students needing immediate, same-day access to a mental health
+                professional during our business hours. Reasons to meet with a Counselor on Duty include, but are not
+                limited to:
             </p>
-            <p>
-                If you are not sure, please consult with us and we'll help you decide.
-            </p>
-            <h3>Peer Support</h3>
-            <figure class="main02-image">
-                <img src="images/IndividualPeerCounselling_CAPS.png" alt="Peer Support">
-            </figure>
             <ul>
-                <li>Individual Peer Counseling</li>
-                <li>Wolverine Support Network (WSN)</li>
-                <li>Collegiate Recovery Program (CRP)</li>
+                <li>If a student is not feeling safe</li>
+                <li>If a student has to make a difficult decision in the next 2-3 days</li>
+                <li>If a student has been sexually assaulted within the past 72 hours</li>
+                <li>If a student has been experiencing a lot of stress for a long time and feels like they urgently need
+                    to speak to someonek</li>
+                <li>If a student has experienced a sudden or unexpected loss</li>
             </ul>
-            <h3>Technology & Apps</h3>
-            <ul>
-                <li>Togetherall</li>
-                <li>Calm App</li>
-                <li>Stressbusters App</li>
-                <li>MiTalk</li>
-                <li>Online anonymous screenings</li>
-            </ul>
-            <h3>Self-Guided</h3>
-            <ul>
-                <li>Wellness Zone</li>
-            </ul>
+            <h3>Consultation</h3>
+            <p>CAPS provides consultation services to faculty, staff, students, campus partners, parents, and community
+                providers regarding mental health concerns. Early identification of concerns and appropriate
+                intervention can better assist connecting students with needed services. CAPS provides consultation
+                services both through the Counselor on Duty and through liaison relationships with departments,
+                programs, schools, and colleges across campus.</p>
         </section>
     </main>
 
     <footer>
-        <p> &copy; University of Michigan | <a href="https://caps.umich.edu/">Counseling and Psychological Services</a>
-        </p>
+        <p>&copy; UMSI <span id="year"></span> | <a
+                href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic
+                Advising </a></p>
+        <p class="footer-contact" tabindex="0" aria-label="Open contact form"
+        onclick="openForm()" onkeydown="handleKeyDown(event)">Contact Us</p>
     </footer>
+
+    <div id="popup">
+        <span class="close" onclick="closeForm()" tabindex="0" >&times;</span>
+        <div class="contactForm">
+            <h2 class="form-header">Contact Us</h2>
+            <form action="https://formspree.io/f/mvgorggw" method="POST">
+                <label for="name">Name:</label>
+                <input id="name" type="name" name="name" placeholder="Write your name here.."></input>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email"placeholder="Let us know how to contact you back.."></input>
+
+                <label for="message">Message:</label>
+                <input id="message" type="message" name="message" placeholder="What would you like to tell us.."></input>
+
+                <input type="submit" value="Submit" tabindex="0" >
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        function openForm() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === ' ' || event.key === "Enter") {
+                openForm();
+            }
+        }
+
+        function closeForm() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+   
 </body>
 
 </html>
