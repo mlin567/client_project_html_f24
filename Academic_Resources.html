@@ -16,7 +16,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="Academic_Resources.html" class="active">Academic Resources</a>
-            <a href="Food_Pantry.html" >Food Pantry</a>
+            <a href="Food_Pantry.html">Food Pantry</a>
             <a href="Counseling_Services.html">Counseling Services</a>
         </nav>
         <h1>Academic Resources</h1>
@@ -25,18 +25,19 @@
     <main id="main">
         <aside class="sidebar-container">
             <h2 class="sidebar-header">Contents</h3>
-            <div class="sidebar-menu">
-                <a href="#important_dates">UMSI Fall 2024 Important Dates</a>
-                <a href="#degree">UMSI Degree Requirements</a>
-                <a href="#useful_programs">Other University-Wide Academic Support Programs</a>
-            </div>
+                <div class="sidebar-menu">
+                    <a href="#important_dates">UMSI Fall 2024 Important Dates</a>
+                    <a href="#degree">UMSI Degree Requirements</a>
+                    <a href="#useful_programs">Other University-Wide Academic Support Programs</a>
+                </div>
         </aside>
 
         <section class="main-intro">
             <h2>Academic Success at UMSI!</h2>
             <p>At the University of Michigan School of Information (UMSI), we are committed to supporting our students'
                 academic success by offering a wide array of resources and services.</p>
-            <p>Our academic advising team provides personalized guidance to help you navigate your curriculum, select courses, and address any academic
+            <p>Our academic advising team provides personalized guidance to help you navigate your curriculum, select
+                courses, and address any academic
                 challenges or questions you may encounter during your studies.</p>
             <p>UMSI students also have access to the
                 extensive collections and study spaces within the University Library system, offering both digital and
@@ -45,7 +46,7 @@
                 services and the UMSI Writing Center are available to support you in mastering complex subjects and
                 enhancing your written communication skills.</p>
             <p>By utilizing these academic resources, UMSI students can
-                thrive in their studies and achieve their educational goals.</p> 
+                thrive in their studies and achieve their educational goals.</p>
         </section>
 
         <section class="main01" id="important_dates">
@@ -84,12 +85,12 @@
         <p>&copy; UMSI <span id="year"></span> | <a
                 href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic
                 Advising </a></p>
-        <p class="footer-contact" tabindex="0" aria-label="Open contact form"
-        onclick="openForm()" onkeydown="handleKeyDown(event)">Contact Us</p>
+        <p class="footer-contact" tabindex="0" aria-label="Open contact form" onclick="openForm()"
+            onkeydown="handleKeyDown(event)">Contact Us</p>
     </footer>
 
     <div id="popup">
-        <span class="close" onclick="closeForm()" tabindex="0" >&times;</span>
+        <span class="close" onclick="closeForm()" onkeydown="handleCloseKeyDown(event)" tabindex="0">&times;</span>
         <div class="contactForm">
             <h2 class="form-header">Contact Us</h2>
             <form action="https://formspree.io/f/mvgorggw" method="POST">
@@ -97,12 +98,13 @@
                 <input id="name" type="name" name="name" placeholder="Write your name here.."></input>
 
                 <label for="email">Email:</label>
-                <input id="email" type="email" name="email"placeholder="Let us know how to contact you back.."></input>
+                <input id="email" type="email" name="email" placeholder="Let us know how to contact you back.."></input>
 
                 <label for="message">Message:</label>
-                <input id="message" type="message" name="message" placeholder="What would you like to tell us.."></input>
+                <input id="message" type="message" name="message"
+                    placeholder="What would you like to tell us.."></input>
 
-                <input type="submit" value="Submit" tabindex="0" >
+                <input type="submit" value="Submit" tabindex="0">
             </form>
         </div>
     </div>
@@ -122,6 +124,12 @@
 
         function closeForm() {
             document.getElementById("popup").style.display = "none";
+        }
+
+        function handleCloseKeyDown(event) {
+            if (event.key === ' ' || event.key === "Enter") {
+                closeForm();
+            }
         }
     </script>
 </body>
